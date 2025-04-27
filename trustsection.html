@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="cs/cheat.css">
+    <link rel="stylesheet" href="cs/index.css">
+
+   <link rel="stylesheet" href="cs/styles.css">
+   <link rel="stylesheet" href="cs/swipper.css">
+   <link rel="stylesheet" href="cs/section.css">		
+   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&amp;display=swap" rel="stylesheet">
+   <script src="https://cdn.tailwindcss.com"></script>
+ 	<title>Articles , Proof</title>
+   <link rel="stylesheet" id="libs-css" href="https://waveup.com/wp-content/themes/waveup/css/libs.css?ver=6.8" type="text/css" media="all">
+   <link rel="stylesheet" id="bottom-banner-css" href="https://waveup.com/wp-content/themes/waveup/css/bottom-banner.css?ver=6.8" type="text/css" media="all">
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    #preloader {
+      background: #00008b;
+      color: #fff;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .containers {
+      position: relative;
+      font-size: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text {
+      position: absolute;
+      opacity: 1;
+      transform-origin: center;
+      animation-fill-mode: forwards;
+    }
+
+    .clo {
+      left: 0;
+      animation: spinUpClockwise 2s ease-in-out forwards;
+    }
+
+    .sana {
+      right: 0;
+      animation: spinUpCounterClockwise 2s ease-in-out forwards;
+    }
+
+    @keyframes spinUpClockwise {
+      0% {
+        transform: rotate(0deg) translateY(0);
+        opacity: 1;
+      }
+      80% {
+        transform: rotate(180deg) translateY(-200px);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes spinUpCounterClockwise {
+      0% {
+        transform: rotate(0deg) translateY(0);
+        opacity: 1;
+      }
+      80% {
+        transform: rotate(-180deg) translateY(-200px);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .dashes {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -200px);
+      display: flex;
+      gap: 10px;
+      animation: showDashes 1s ease-in-out 2s forwards;
+    }
+
+    @keyframes showDashes {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -200px) scale(0.8) rotate(-20deg);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -200px) scale(1) rotate(0deg);
+      }
+    }
+
+    .dash {
+      width: 4px;
+      background: white;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      opacity: 0.9;
+      margin: 5px;
+    }
+
+    .dash.short {
+      height: 30px;
+    }
+
+    .dash.tall {
+      height: 45px;
+    }
+
+    /* Content hidden initially */
+    #main-content {
+/* display: none; */
+}
+.popup-container {
+position: fixed;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%) translateY(-15px);
+display: none;
+opacity: 0;
+transition: all 0.6s ease;
+
+/* Styling */
+padding: 24px 32px;
+background-color: #ffffff;
+border: 1px solid #e0e0e0;
+border-radius: 12px;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+max-width: 90%;
+width: 100%;
+max-width: 500px;
+
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+color: #222;
+z-index: 10000;
+}
+
+.popup-container.show {
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 1;
+transform: translate(-50%, -50%) translateY(0);
+}
+
+.popup-container.hide {
+opacity: 0;
+transform: translate(-50%, -50%) translateY(20px);
+}
+.popup-container.show {
+animation: popupFadeIn 0.6s ease forwards;
+}
+
+@keyframes popupFadeIn {
+from {
+opacity: 0;
+transform: translate(-50%, -50%) scale(0.95);
+}
+to {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+}
+@media(max-width:700px) {
+  .containers {
+      position: relative;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+}
+  </style> 
+    </head>
+		 
+<body class="wp-singular page-template-default page page-id-200 wp-theme-waveup" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" cz-shortcut-listen="true"><div id="heurio-app" class="heurio-app" version="2.5.01.13"><div class="heurio-overlay"><!----><!----></div><!----></div>
+    <!-- <div id="preloader">
+        <div class="containers">
+          <div class="text clo">SANA</div>
+          <div class="text sana">CLO</div>
+          <div class="dashes">
+            <div class="dash short"></div>
+            <div class="dash tall"></div>
+            <div class="dash short"></div>
+          </div>
+        </div>
+      </div> -->
+     
+    <div id="main-content" class="wrapper" style="opacity: 0;">
+      <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30 md:hidden"></div>
+      <header class="header" id="header">
+          <div class="header__container">
+              <a class="header__logos" href="index.html" aria-label="closana logo"></a>
+              <ul id="header__menu" class="header__menu">
+                  <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                      <a href="whatWeDo.html">What We Do </a>
+                      
+                   </li>
+                  <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                    <a href="whyclosana.html">Why Closana</a>
+                </li>
+                  <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                      <a href="about.html">About Us</a>
+                  </li>
+                  <li id="menu-item-16525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16525">
+                      <a href="trustsection.html">Articles Featured</a>
+                  </li>
+
+                  <div class="  ml-[30px]"> 
+                    <a class=" btns   bg-[#00008b]  gap-[20px]  text-[#212121]" href="https://calendly.com/aziz-closana/meeting">
+                        <span class="text-[#212121] mons">Book Strategy Call</span>
+                        <svg class="arr" viewbox="0 0 813 486" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="bar" height="60" rx="30" width="800" y="213"></rect>
+                            <path class="chevron" d="m793.388955 224.472433c9.626991 11.783528 8.945751 29.177709-2.043717 40.167177l-200.139611 200.139611c-11.715728 11.715728-30.710678 11.715728-42.426406 0-11.715729-11.715729-11.715729-30.710679 0-42.426407l179.073593-179.073593-179.352814-179.3528141c-11.715729-11.7157288-11.715729-30.7106781 0-42.4264069 11.715729-11.71572875 30.710678-11.71572875 42.426407 0l199.418831 199.418831c1.122031 1.122031 2.136603 2.310828 3.043717 3.553602z"></path>
+                        </svg>
+                    </a>
+                    
+                </div>
+               </ul>
+             
+              <div class="header__burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </header>
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container breadcrumbs__container">
+        <p><span><span><a href="index.html">Home</a></span> <span class="breadcrumb_last" aria-current="page" >/  Who we are</span></span></p>	</div>
+    </section>
+            <section id="heading" class="heading   heading--normal" style="background-image: url('assests/shakingss.jpg');"  >
+            <div class="heading__container">
+                <div class="heading__content">
+                     <h1 class="heading__title h1 ">Trusted and Featured In</h1>
+                  </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+                Trusted and Featured In
+              </h2>
+          
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-[10px] items-center justify-center">
+                <img
+                  src="assests/Benzinga-Logo.png"
+                  alt="Benzinga"
+                  class="h-[40px] grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition duration-300 mx-auto"
+                />
+                <img
+                  src="assests/Associated-Press-logo.png"
+                  alt="AP News"
+                  class="h-[40px] grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition duration-300 mx-auto"
+                />
+                <img
+                  src="assests/Yahoo-Finance-PNG-HD-Quality.png"
+                  alt="Yahoo Finance"
+                  class="h-[40px] grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition duration-300 mx-auto"
+                />
+                <img
+                  src="assests/mw.png"
+                  alt="MarketWatch"
+                  class="h-[40px] grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition duration-300 mx-auto"
+                />
+              </div>
+            </div>
+          </section>
+          
+          <footer id="footer" class="footer bg--dark">
+            <div class="footer__container">
+                <div class="footer__menus">
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">Colsana</p>
+                        <ul id="footer__menu_1" class="footer__menu">
+                            
+                            <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
+                                <a href="whatwedo.html"> What We Do</a>
+                            </li>
+                            <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
+                                <a href="whyclosana.html"> Why Colsana</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">Our company</p>
+                        <ul id="footer__menu_2" class="footer__menu">
+                            
+                            <li id="menu-item-16182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16182">
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88">
+                                <a rel="nofollow" href="trustsection.html">Articles Featured</a>
+                            </li>
+                            
+                             
+                        </ul>
+                    </div>
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">Information</p>
+                        <ul id="footer__menu_3" class="footer__menu">
+                            <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-94">
+                                <a rel="nofollow privacy-policy" href="privacypolicy.html">Privacy Policy</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="subscribe">
+                    <p class="subscribe__title">Subscribe to newsletter</p>
+                    <form id="subscribeForm" action="" class="subscribe__form"  >
+                        <input type="email" name="email" class="subscribe__form_input" placeholder="Enter your email">
+                        <input type="hidden" name="mc_audience" value="c44a717c87">
+                        <input type="hidden" name="reply_list" value="">
+                        <input type="hidden" name="formname" value="subscribeForm">
+                        <button type="submit" class="subscribe__form_btn">Subscribe</button>
+                        <p class="subscribe__form_success success__text">Thank you, your sign-up request was successful!</p>
+                    </form>
+         
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copy">
+                        <p>
+                            © 2025 Closana  | All Rights Reserved  |  
+                            | <a href="privacypolicy.html" rel="nofollow">Privacy Policy</a>
+                        </p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+          </footer>
+
+      <!-- END HIDDEN ELEMENTS (MODALS)-->
+<div class="modal-overlay" id="modal-video">
+    <div class="modal-overlay__container">
+        <div class="modal-content">
+            <div class="close-button"></div>
+            <div class="video">
+                <div id="video-popup"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+      <div class="modal-overlay modal-contact-us" id="modal-contact-us">
+        <div class="modal-overlay__container" style="margin-bottom: 130px; margin-top: 130px;">
+            <div class="modal-content">
+                <div class="close-button"></div>
+                <div class="modal-contact-us__title">
+                  Got a <span>vision you're building?</span>
+                </div>
+                <p class="modal-contact-us__subtitle">
+                  Leave your information below and one of our <br class="_desctop">experts will be in touch to schedule a call.
+      
+                <form id="contactUsModal" action="" class="modal-contact-us__form">
+                    <div class="item">
+                        <span class="item__label">Your name:</span>
+                        <input type="text" name="client_name" class="item__input" placeholder="Enter your name">
+                    </div>
+                    <div class="item">
+                        <span class="item__label">*Your email:</span>
+                        <input type="email" name="email" class="item__input" placeholder="Enter your email" required=''>
+                    </div>
+                    <div class="item item-requests">
+                        <span class="item__label">*You need help with:</span>
+                        <div class="item__dropdown dropdown">
+                            <ul class="dropdown__input item__input">
+                                <li class="_default">
+                                    <span class="_default">Select options</span>
+                                    <!-- <span class="close"></span> -->
+                                </li>
+                            </ul>
+                            <div class="dropdown__content">
+                                <label>
+                                    <input type="checkbox" name="requests" value="Pitch deck" data-name="VC-ready pitch deck">
+                                    <span>VC-ready pitch deck</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="requests" value="Financial model" data-name="Financial forecast">
+                                    <span>Financial forecast</span>
+                                </label>
+                                <label class="_disabled">
+                                    <input type="checkbox" name="requests" value="Investor outreach" data-name="Find investors">
+                                    <span>
+                                        Find investors <span>(FULLY SUBSCRIBED)</span>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="requests" value="Design" data-name="Slides design">
+                                    <span>Slides design</span>
+                                </label>
+      </label>
+      <label>
+        <input type="checkbox" name="requests" value="Other" data-name="Other">
+        <span>Other</span>
+      </label>
+      </div></div></div>
+      <div class="item">
+        <span class="item__label">Your project is:</span>
+        <input type="text" name="project" class="item__input" placeholder="Subscription based AI platform">
+      </div>
+      <div class="item">
+        <span class="item__label">Your current stage:</span>
+        <input type="text" name="stage" class="item__input" placeholder="Seed stage">
+      </div>
+      <div class="item">
+        <span class="item__label">Your maximum budget:</span>
+        <input type="text" name="budget" class="item__input" placeholder="$6 000">
+      </div>
+      <div class="item">
+        <span class="item__label">How did you find us?</span>
+        <input type="text" name="client_source" class="item__input" placeholder="Google">
+      </div>
+      <input type="hidden" name="mc_audience" value="c44a717c87">
+      <input type="hidden" name="reply_list" value="">
+      <input type="hidden" name="formname" value="modalContactUs">
+      <button type="submit" class="btn">Submit</button>
+      <p class="success__text">Thank you, your sign-up request was successful!</p>
+      </form>
+      </div>
+      </div>
+      </div>
+ 
+</div>
+ 
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+<script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      const mainContent = document.getElementById("main-content");
+      const popup = document.getElementById("popup");
+  
+      // Show preloader for 3 seconds
+      setTimeout(() => {
+        preloader.style.display = "none";
+        mainContent.style.display = "block";
+        setTimeout(() => {
+          mainContent.style.opacity = 1;
+        }, 50);
+  
+        // Show popup
+        popup.classList.add("show");
+  
+        // Close popup after 3 seconds
+        setTimeout(() => {
+          popup.classList.remove("show");
+          popup.classList.add("hide");
+  
+          // Completely hide after animation
+          setTimeout(() => {
+            popup.style.display = "none";
+          }, 600); // match CSS transition time
+        }, 3000);
+      }, 3000);
+    });
+  </script>
+  
+<link rel="stylesheet" id="block-acf-section-css" href="https://waveup.com/wp-content/themes/waveup/template-parts/gutenberg/section/section.css?ver=6.4.0.1" type="text/css" media="all">
+ 
+
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/custom-live-search.js?ver=1.0" id="custom-live-search-js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js?ver=6.8" id="jq-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/cookie.js?ver=6.8" id="cookie-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.cookie.js?ver=6.8" id="jquery.cookie-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/validator.js?ver=6.8" id="validator-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/popup_script.js?ver=6.8" id="popup_script-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/counter2up.js?ver=6.8" id="counter2up-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/aos.js?ver=6.8" id="aos-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.waypoints.js?ver=6.8" id="waypoints-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/swiper-bundle.min.js?ver=6.8" id="swiper-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.countdown.js?ver=6.8" id="jquery.countdown-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/countdown.js?ver=6.8" id="countdown-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/secondaryUtm.js?ver=6.8" id="secondary_utm-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/main.js?ver=6.8" id="main-js"></script>
+
+
+
+ 
+</body>
+ </html>

@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <!-- <link rel="preload" href="/fonts/Aeroport-Bold/Aeroport-Bold.woff2" as="font" type="font/woff2" crossorigin> -->
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&amp;display=swap" rel="stylesheet">
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+    
+          body,
+          html {
+            height: 100%;
+            font-family: sans-serif;
+          }
+    
+          #preloader {
+            background: #00008b;
+            color: #fff;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            overflow: hidden;
+          }
+    
+          .containers {
+            position: relative;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    
+          .text {
+            position: absolute;
+            opacity: 1;
+            transform-origin: center;
+            animation-fill-mode: forwards;
+          }
+    
+          .clo {
+            left: 0;
+            animation: spinUpClockwise 2s ease-in-out forwards;
+          }
+    
+          .sana {
+            right: 0;
+            animation: spinUpCounterClockwise 2s ease-in-out forwards;
+          }
+    
+          @keyframes spinUpClockwise {
+            0% {
+              transform: rotate(0deg) translateY(0);
+              opacity: 1;
+            }
+            80% {
+              transform: rotate(180deg) translateY(-200px);
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+    
+          @keyframes spinUpCounterClockwise {
+            0% {
+              transform: rotate(0deg) translateY(0);
+              opacity: 1;
+            }
+            80% {
+              transform: rotate(-180deg) translateY(-200px);
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+    
+          .dashes {
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -200px);
+            display: flex;
+            gap: 10px;
+            animation: showDashes 1s ease-in-out 2s forwards;
+          }
+    
+          @keyframes showDashes {
+            from {
+              opacity: 0;
+              transform: translate(-50%, -200px) scale(0.8) rotate(-20deg);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, -200px) scale(1) rotate(0deg);
+            }
+          }
+    
+          .dash {
+            width: 4px;
+            background: white;
+            transform: rotate(45deg);
+            border-radius: 2px;
+            opacity: 0.9;
+            margin: 5px;
+          }
+    
+          .dash.short {
+            height: 30px;
+          }
+    
+          .dash.tall {
+            height: 45px;
+          }
+    
+          /* Content hidden initially */
+          #main-content {
+  /* display: none; */
+}
+.popup-container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-15px);
+  display: none;
+  opacity: 0;
+  transition: all 0.6s ease;
+
+  /* Styling */
+  padding: 24px 32px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  width: 100%;
+  max-width: 500px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  z-index: 10000;
+}
+
+.popup-container.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.popup-container.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(20px);
+}
+.popup-container.show {
+  animation: popupFadeIn 0.6s ease forwards;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+        </style>  
+        
+       <title> Home | Closana</title>
+               <!-- <link rel="stylesheet" id="gdpr-css" href="https://waveup.com/wp-content/plugins/gdpr/dist/css/public.css?ver=2.1.2" type="text/css" media="all"> -->
+    <link rel="stylesheet" id="libs-css" href="https://waveup.com/wp-content/themes/waveup/css/libs.css?ver=6.8" type="text/css" media="all">
+    <link rel="stylesheet" id="bottom-banner-css" href="https://waveup.com/wp-content/themes/waveup/css/bottom-banner.css?ver=6.8" type="text/css" media="all">
+    <link rel="stylesheet" id="main-new-css" href="https://waveup.com/wp-content/themes/waveup/css/main-new.css?ver=6.8" type="text/css" media="all">
+    <!-- <meta name="description" content="Capital advisory for early-stage startups, offering expert guidance in fundraising, VC strategy, and M&A to drive growth and long-term value."/> -->
+    <link rel="stylesheet" href="cs/cheat.css">
+    <link rel="stylesheet" href="cs/index.css">
+    <link rel="stylesheet" href="cs/other.css">
+
+   <link rel="stylesheet" href="cs/styles.css">
+   <link rel="stylesheet" href="cs/swipper.css">
+   <link rel="stylesheet" href="cs/section.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <script type="text/javascript" src="https://waveup.com/wp-content/plugins/gdpr/dist/js/public.js?ver=2.1.2" id="gdpr-js"></script> -->
+    <body  class="home  wp-singular page-template page-template-page-main-new page-template-page-main-new-php page page-id-17272 wp-theme-waveup page-main-new">
+    
+      <!-- preloader -->
+      <div id="preloader">
+          <div class="containers">
+            <div class="text clo text-[30px] sm:text-[100px]">SANA</div>
+            <div class="text sana text-[30px] sm:text-[100px]">CLO</div>
+            <!-- <div class="dashes">
+              <div class="dash short"></div>
+              <div class="dash tall"></div>
+              <div class="dash short"></div>
+            </div> -->
+          </div>
+        </div>
+        
+      
+        <div id="main-content"  class="wrapper" style="opacity:0;  ">
+          <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30 md:hidden"></div>
+              <header class="header" id="header">
+                  <div class="header__container">
+                      <a class="header__logos" href="index.html" aria-label="closana logo"></a>
+                      <ul id="header__menu" class="header__menu">
+                          <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                              <a href="whatWeDo.html">What We Do </a>
+                              
+                           </li>
+                          <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                            <a href="whyclosana.html">Why Closana</a>
+                        </li>
+                          <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                              <a href="about.html">About Us</a>
+                          </li>
+                          <li id="menu-item-16525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16525">
+                              <a href="trustsection.html">Articles Featured</a>
+                          </li>
+ 
+                          <div class="  ml-[30px]"> 
+                            <a class=" btns   bg-[#00008b]  gap-[20px]  text-[#212121]" href="https://calendly.com/aziz-closana/meeting">
+                                <span class="text-[#212121] mons">Book Strategy Call</span>
+                                <svg class="arr" viewbox="0 0 813 486" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="bar" height="60" rx="30" width="800" y="213"></rect>
+                                    <path class="chevron" d="m793.388955 224.472433c9.626991 11.783528 8.945751 29.177709-2.043717 40.167177l-200.139611 200.139611c-11.715728 11.715728-30.710678 11.715728-42.426406 0-11.715729-11.715729-11.715729-30.710679 0-42.426407l179.073593-179.073593-179.352814-179.3528141c-11.715729-11.7157288-11.715729-30.7106781 0-42.4264069 11.715729-11.71572875 30.710678-11.71572875 42.426407 0l199.418831 199.418831c1.122031 1.122031 2.136603 2.310828 3.043717 3.553602z"></path>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                       </ul>
+                     
+                      <div class="header__burger">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+              </header>
+   
+                      <section id="heading-dark-block_e1651061f1b29ac9b8445e9ad710fd65" class="heading-light">
+                <div class="header__container">
+                    <div class="heading-dark__contents  mt-[60px]">
+                        <h1 class="heading-dark__titles  ">Raise Capital Smarter, Faster — Without the Guesswork.</h1>
+                        <p class="heading-dark__subtitles mb-[20px] md:w-[400px]">Modern capital advisory for startups who want real results, not empty promises.
+
+                        </p>
+                        <div class=" gap-[30px] text-[12px]  flex flex-wrap mons font-[700] mx-[auto] justify-center xl:justify-start"> 
+                          <a class="btns bg-[#00008b]   gap-[20px]  text-[#212121]" href="https://calendly.com/aziz-closana/meeting">
+                              <span class="text-[#212121] mons">Book Strategy Call</span>
+                              <svg class="arr" viewbox="0 0 813 486" xmlns="http://www.w3.org/2000/svg">
+                                  <rect class="bar" height="60" rx="30" width="800" y="213"></rect>
+                                  <path class="chevron" d="m793.388955 224.472433c9.626991 11.783528 8.945751 29.177709-2.043717 40.167177l-200.139611 200.139611c-11.715728 11.715728-30.710678 11.715728-42.426406 0-11.715729-11.715729-11.715729-30.710679 0-42.426407l179.073593-179.073593-179.352814-179.3528141c-11.715729-11.7157288-11.715729-30.7106781 0-42.4264069 11.715729-11.71572875 30.710678-11.71572875 42.426407 0l199.418831 199.418831c1.122031 1.122031 2.136603 2.310828 3.043717 3.553602z"></path>
+                              </svg>
+                          </a>
+                          
+                      </div>
+                    </div> 
+                    <div class="heading-dark__images lazyload-bg mt-[-50px] "  >
+                    <!-- <div class="icon icon-1 lazyload-bg" style="background-image: url('./assests/vecteezy_blue-ice-crystal-in-cartoon-style_21608676.png');"></div> -->
+                    <div class="icon icon-2 lazyload-bg w-[500px] mt-[0px] mr-[30px] m-[auto] " style="  background-image: url('assests/Business-client.jpeg'); "></div>
+                    <!-- <div class="icon icon-3 lazyload-bg" style="background-image: url('./assests/vecteezy_blue-ice-crystal-in-cartoon-style_21608676.png');"></div> -->
+                </div>
+              </div>
+            </section>
+            
+   
+          <!-- what we do -->
+          <section id="section-block_4b59f2120802e0502f3f5dc8658b2eed" class="section bg--white section--content--image">
+            <div class="section__container">
+            <div class="section__content">
+             <h2 class="heading__title ">What We Deliver:</h2>
+             <div class="section__content_text"><p><span style="font-weight: 400;">If you want to measure the effectiveness of </span><span style="font-weight: 400;">growth strategy consulting</span><span style="font-weight: 400;">, try to track the following </span><a href="https://waveup.com/blog/operational-efficiency-metrics-and-kpis-saas/"><span style="font-weight: 400;">business metrics and KPIs</span></a><span style="font-weight: 400;">:</span></p>
+            <ul class="mons">
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">14–21 day investor packaging</span></li>
+            <li style="font-weight: 400;" aria-level="1"><a href="https://waveup.com/dashboard/cac-calculator/"><span style="font-weight: 400;">Customer acquisition cost (CAC)</span></a><span style="font-weight: 400;">;</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Outreach to 300+ VCs/investors per campaign</span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">30–50 warm investor conversations per client
+            </span></li>
+            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Support from first email to signed term sheet
+            </span></li>
+           
+            
+        
+            </ul>
+            <p style="margin-top: 20px; "> We don’t “advise.” We deliver signed term sheets.
+            </p>
+            
+            </div> 
+            </div>  
+            <div class="section__image"> 
+                <div class="image lazyload-bg" style="padding-top:83%;background-image:url(https://waveup.com/wp-content/uploads/2024/10/growth-hacking-consultant-1.svg)"></div>
+                 </div> 
+                </div>
+                 </section>
+
+                 <section id="clients-block_21c1e347ff51377a4820a2ee9dba82b8" class="clients bg-[#294495] pt0 pb0 --items-m-0">
+                    <div class="clients__container">
+                        <div class="clients__items clients__items--slider">
+                            <div class="clients__items_bg"></div>
+                            <div class="clients__slider clients__slider--1 swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1150.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/g3.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1164.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-720.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1156.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1158.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/HeyTutor-1.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/fund.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/apollo.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/skeleton.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/ofo.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/qawafel.svg);"></div>
+                                </div>
+                            </div>
+                            <div class="clients__slider clients__slider--2 swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1163.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1151.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1161.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1154.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1157.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/Group-1159.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/soho.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/a123systems.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/ekco.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/buzzar.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/nintendo.svg);"></div>
+                                    <div class="logo swiper-slide lazyload-bg" style="background-image: url(https://waveup.com/wp-content/uploads/2023/07/moneysmart.svg);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section class="bg-white py-24 px-4 sm:px-8 lg:px-20">
+                    <div class="max-w-7xl mx-auto">
+                      <!-- Title -->
+                      <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl sm:text-5xl mons font-extrabold text-gray-800 mb-4">
+                          Why <span class="text-blue-700">Closana</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                          The Blitz Model That Outperforms Traditional Advisors.
+                        </p>
+                      </div>
+                  
+                      <!-- Comparison Table -->
+                      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-gray-100 rounded-xl shadow-sm overflow-hidden">
+                        <!-- Left Column (Features) -->
+                        <div class="bg-[#cee4f1] text-[#00008b] mons p-6 sm:p-8 flex flex-col justify-center">
+                          <h3 class="text-2xl font-semibold mb-6 mons">Closana</h3>
+                          <ul class="space-y-5">
+                            <li class="flex items-start gap-3">
+                              ✅ <span>Execution-First</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                              ✅ <span>Real VC Connections</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                              ✅ <span>No Retainers</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                              ✅ <span>Data-Driven Blitz Systems</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                              ✅ <span>Aligned by Success Fee</span>
+                            </li>
+                          </ul>
+                        </div>
+                  
+                        <!-- Middle Column (Divider) -->
+                        <div class="hidden mons md:flex items-center justify-center bg-white text-gray-400 text-sm font-medium tracking-wider">
+                          VS
+                        </div>
+                  
+                        <!-- Right Column (Traditional Advisors) -->
+                        <div class="bg-white mons p-6 sm:p-8 flex flex-col justify-center">
+                          <h3 class="text-2xl mons font-semibold mb-6 text-gray-800">Traditional Advisors</h3>
+                          <ul class="space-y-5 text-gray-600">
+                            <li class="flex items-start mons gap-3">
+                              ❌ <span>Advice-First</span>
+                            </li>
+                            <li class="flex items-start mons gap-3">
+                              ❌ <span>Random Introductions</span>
+                            </li>
+                            <li class="flex items-start mons gap-3">
+                              ❌ <span>High Retainers, Slow Results</span>
+                            </li>
+                            <li class="flex items-start mons gap-3">
+                              ❌ <span>Unstructured Guesswork</span>
+                            </li>
+                            <li class="flex items-start mons gap-3">
+                              ❌ <span>Misaligned Fee Structures</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                  
+                      <!-- Bottom Line -->
+                      <div class="text-center mt-14">
+                        <p class="text-lg sm:text-xl mons text-gray-700 max-w-2xl mx-auto font-medium ">
+                           We work like your fundraising partner, not a consultant.
+                        </p>
+
+                         </section>
+
+                          <section id="indicators-block_8bbaeccebbd71fd17b783a651b7c9a86" class="indicators bg-[#070763]">
+                <div class="indicators__container">
+                    <div class="indicators__content">
+                        <h2 class="indicators__title h2 ">Performance Snapshot</h2>
+                        <p class="indicators__subtitle">Trusted by Founders Targeting Serious Capital
+                        </p>
+                        <!-- <a class="indicators__btn btn" href="#modal-contact-us">
+                            <span>Our latest work</span>
+                            <svg class="arr" viewbox="0 0 813 486" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="bar" height="60" rx="30" width="800" y="213"></rect>
+                                <path class="chevron" d="m793.388955 224.472433c9.626991 11.783528 8.945751 29.177709-2.043717 40.167177l-200.139611 200.139611c-11.715728 11.715728-30.710678 11.715728-42.426406 0-11.715729-11.715729-11.715729-30.710679 0-42.426407l179.073593-179.073593-179.352814-179.3528141c-11.715729-11.7157288-11.715729-30.7106781 0-42.4264069 11.715729-11.71572875 30.710678-11.71572875 42.426407 0l199.418831 199.418831c1.122031 1.122031 2.136603 2.310828 3.043717 3.553602z"></path>
+                            </svg>
+                        </a> -->
+                    </div>
+                    <div class="indicators__items">
+                        <div class="item">
+                            <!-- <div class="item__uptitle">VALIDATION</div> -->
+                            <div class="item__title">$1.2B+</div>
+                            <div class="item__subtitle">Active Fundraising Rounds Targeted</div>
+                        </div>
+                        <div class="item">
+                            <!-- <div class="item__uptitle">DEPTH</div> -->
+                            <div class="item__title">30-50</div>
+                            <div class="item__subtitle">Warm investor Intros per client</div>
+                        </div>
+                        <div class="item">
+                            <!-- <div class="item__uptitle">COMMUNITY</div> -->
+                            <div class="item__title">$300M+</div>
+                            <div class="item__subtitle">Investor Investor Engaged</div>
+                        </div>
+                       
+                        <div class="item">
+                            <!-- <div class="item__uptitle">RETURNS</div> -->
+                            <div class="item__title">500+</div>
+                            <div class="item__subtitle">Startups targeted monthly
+                            </div>
+                        </div>
+                        <div class="item">
+                          <!-- <div class="item__uptitle">NETWORK</div> -->
+                          <div class="item__title">$500K-$5M</div>
+                          <div class="item__subtitle">Typical raise supported
+                        </div>
+                      </div>
+                        <!-- <div class="item">
+                            <div class="item__uptitle">RESULTS</div>
+                            <div class="item__title">6</div>
+                            <div class="item__subtitle">
+                                startups became unicorns <br>with Closana
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white py-20 px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                  <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mons mb-4">
+                    Featured Resources
+                  </h2>
+                  <p class="text-lg text-gray-600 mb-12 mons">Learn How We Raise Smarter</p>
+              
+                  <div class="flex flex-col gap-5 items-center">
+                    <!-- Resource Button 1 -->
+                    <a href="https://docs.google.com/document/d/1zB4mHZ359wpLooqdbiIHITZoY0XkG7vIiHa4QHwGhbw/edit?usp=drivesdk" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 bg-[#00008b] mons text-white text-base font-medium rounded-full shadow-md hover:bg-blue-900 transition duration-300">
+                      📄 Harsh Truths for Fundraising Success (PDF)
+                    </a>
+              
+                    <!-- Resource Button 2 -->
+                    <a href="https://docs.google.com/document/d/1OhQ8588GLAMJ5nJhV3ATpRY_oqcUtPtYJJmVT_p8jok/edit?usp=drivesdk" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 bg-[#00008b] mons text-white text-base font-medium rounded-full shadow-md hover:bg-blue-900 transition duration-300">
+                      📄 Closana Fundraising Engine Overview (PDF)
+                    </a>
+              
+                    <!-- Resource Button 3 -->
+                    <a href="https://angelmatch.io/pitch_decks" target="_blank" class="inline-flex mons items-center gap-3 px-6 py-4 bg-[#00008b] text-white text-base font-medium rounded-full shadow-md hover:bg-blue-900 transition duration-300">
+                      📄 Top Startup Pitch Decks (Examples PDF)
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              <section id="get-block_d37389faa5e9d151457d5e2a31695b0d" class="get is-style-white align--center">
+                <div class="get__container container mons">
+                  <h2 class="mons text-center">Closana in the Media
+                    </h2>
+                    
+                    <div class="get__list"><ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> <b> Associated Press (AP)</b> — “Fundraising for Modern Founders”
+                </span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><b>Benzinga</b> — “Closana’s Disruptive Blitz Strategy”</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><b>Barchart</b> — “Revolutionizing Capital Access in Europe”</span></li>
+                 </ul>
+                <div id="gtx-trans" style="position: absolute; left: 143px; top: -6px;">
+                <div class="gtx-trans-icon"></div>
+                </div>
+                </div>
+                </div>
+                </section>
+              
+                <section id="team"  class="bg--dark py-20" id="team" style="background-image:linear-gradient(to right, #cee4f1, #cee4f1), url(assests/bgwitws.jpg);">
+                    <div class="max-w-7xl mons mx-auto px-6">
+                      <h1 class="heading__title mt-[-10px] ">Meet the 
+                        <span class="text-[#00008b]">
+                            Team
+                      </span>
+                      </h2>
+                      <p class="heading-dark__subtitles mb-[30px]">
+                        Real Experts. Real Execution.
+                      </p>
+                  
+                      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                  
+                        <!-- Aziz -->
+                        <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+                          <div class="bg--white rounded-2xl p-6 relative transition text-center">
+                          <img src="assests/E2C822E9-791C-43B3-B071-B0690C352E3E.png" alt="Aziz Hemissi" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+                          <span class="text-[23px] inter font-bold text-[#000]">Aziz Hemissi</h3>
+                          <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Founder & CEO</p>
+                          
+                        </div>
+                  
+                        <!-- Overlay -->
+                        <div
+                        class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+                         <!-- <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Founder & Capital Strategy Lead</p> -->
+                        <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+                            Entrepreneur, investor, and sales strategist. Proven track record helping startups grow and scale.
+                        </p>
+                        <a href="http://linkedin.com/in/azizhemissi" target="_blank"
+                        class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+                        LinkedIn
+                        <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+                          →
+                        </span>
+                        </a>
+                         </div>
+                        </div>
+                        <!-- end overlay -->
+                  
+                        <!-- Danny -->
+                        <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="bg-white rounded-2xl p-6  transition text-center">
+                          <img src="assests/7D0AD271-0AF7-4AF1-88ED-32DA8DD90A87.png" alt="Danny" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+                          <span class="text-[23px] inter font-bold text-[#000]">Danny</h3>
+                          <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Lead Growth Strategist</p>
+                           
+                        </div>
+                  
+                        <!-- Overlay -->
+                        <div
+                        class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+                          <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+                            15+ years cold email & outbound mastery. Booked thousands of B2B meetings for startups.
+                        </p>
+                        <a  href="http://linkedin.com/in/danielpkirk" target="_blank"
+                        class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+                        LinkedIn
+                        <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+                          →
+                        </span>
+                        </a>
+                         </div>
+                        </div>
+                        <!-- end overlay -->
+                  
+                        <!-- Andrew -->
+                        <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="bg-white rounded-2xl p-6  transition text-center">
+                          <img src="assests/F5BE2D49-E417-402F-8F2E-1C9F261B12BD.jpeg" alt="Andrew Troya" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+                          <span class="text-[23px] inter font-bold text-[#000]">Andrew Troya</h3>
+                          <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Head of Outreach Ops</p>
+                         
+                        </div>
+                  
+                         <!-- Overlay -->
+                         <div
+                         class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+                         <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+                            Built multi-channel outbound systems. Specialist in VC, SaaS, and fintech engagement.
+                        </p>
+                        <a href="http://linkedin.com/in/andrew-troya-138448116" target="_blank" 
+                        class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+                        LinkedIn
+                        <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+                          →
+                        </span>
+                      </a>
+                          </div>
+                         </div>
+                         <!-- end overlay -->
+                   
+                  
+                        <!-- Bryan -->
+                        <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="bg-white rounded-2xl p-6  transition text-center">
+                          <img src="assests/A70F027E-70C7-4657-BC47-58A2A3AE3446.jpeg" alt="Bryan Wakefield" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+                          <span class="text-[23px] inter font-bold text-[#000]">Bryan Wakefield</h3>
+                          <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Fractional CFO </p>
+                          
+                        </div>
+                  
+                         <!-- Overlay -->
+                         <div
+                         class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+                         <p class="text-[#212121] fonthack text-sm leading-relaxed mb-4">
+                            20+ years high-growth finance. Multi-million dollar exits. Expert in fundraising models VCs trust.
+                        </p>
+                        <a  href="http://linkedin.com/in/bryanlwakefield" target="_blank" 
+                        class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+                        LinkedIn
+                        <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+                          →
+                        </span>
+                      </a>
+                          </div>
+                         </div>
+                         <!-- end overlay -->
+                   
+                  
+                        <!-- Kwesi -->
+                        <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="bg-white rounded-2xl p-6  transition text-center">
+                          <img src="assests/E75B0B68-0BE5-48E5-A9C6-500CA74A48F1.jpeg" alt="Kwesi Bhengu" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+                          <span class="text-[23px] inter font-bold text-[#000]">Kwesi Bhengu</span>
+                          <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Legal Advisor</p>
+                         
+                          <!-- No LinkedIn provided -->
+                        </div>
+                  
+                         <!-- Overlay -->
+                         <div
+                         class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+                         <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+                            Specialist in corporate structuring, venture deals, and founder protections.
+                        </p>
+                          </div>
+                         </div>
+                         <!-- end overlay -->
+                   
+                  
+                      </div>
+                    </div>
+                      </section>
+
+                      <section class="bg-gray-50 py-24 px-6">
+                        <div class="max-w-5xl mx-auto mons">
+                          <div class="text-center mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-[#00008b] mons">How Our Capital Blitz Works</h2>
+                            <p class="mt-4 text-[14px] md:text-lg text-gray-600">A proven 3-step fundraising engine for modern founders.</p>
+                          </div>
+                      
+                          <div class="relative border-l-4 border-indigo-500 ml-6 space-y-12">
+                            <!-- Step 1 -->
+                            <div class="relative pl-12">
+                              <div class="absolute -left-6 top-1 w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h13M3 12l3-3m0 0l3 3m-3-3v12" />
+                                </svg>
+                              </div>
+                              <h3 class="text-2xl font-semibold text-gray-800 mons">Investor Packaging</h3>
+                              <p class="mt-2 text-gray-600 text-[14px] md:text-md">Decks, financial models, and one-pagers crafted in 14–21 days to establish credibility and readiness.</p>
+                            </div>
+                      
+                            <!-- Step 2 -->
+                            <div class="relative pl-12">
+                              <div class="absolute -left-6 top-1 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                              </div>
+                              <h3 class="text-2xl font-semibold text-gray-800 mons">Targeted Blitz Outreach</h3>
+                              <p class="mt-2 text-gray-600 text-[14px] md:text-md mons">Outreach to 300–500+ relevant investors using personalized messaging that gets replies.</p>
+                            </div>
+                      
+                            <!-- Step 3 -->
+                            <div class="relative pl-12">
+                              <div class="absolute -left-6 top-1 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 4a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                              </div>
+                              <h3 class="text-2xl font-semibold text-gray-800 mons">Deal Conversion Support</h3>
+                              <p class="mt-2 text-gray-600 text-[14px] md:text-md mons">Strategic guidance on negotiation, follow-ups, and closing term sheets with confidence.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      
+         
+        <section id="as-featured-in-new-block_cfe13d4c7cc191c712ed92b43b2f395a" class="as-featured-in-new bg--dark bg--dark">
+	<div class="as-featured-in-new__container mons">
+		<h3 class="as-featured-in-new__title mons">AS FEATURED IN:</h3>
+
+		<div class="as-featured-in-new__items">
+							
+											<a href="#" target="_blank" class="logo" title="Forbes" aria-label="Go to the site Forbes">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/Forbes.svg" alt="Forbes" srcset="" sizes="">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="TechCrunch" aria-label="Go to the site TechCrunch">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/TechCrunch.webp" alt="Techcrunch" srcset="https://waveup.com/wp-content/uploads/2024/02/TechCrunch.webp 360w, https://waveup.com/wp-content/uploads/2024/02/TechCrunch-300x82.webp 300w" sizes="(max-width: 360px) 100vw, 360px">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="Crunchbase" aria-label="Go to the site Crunchbase">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/Crunchbase.svg" alt="Crunchbase" srcset="" sizes="">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="Wamda" aria-label="Go to the site Wamda">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/Wamda.webp" alt="Wamda" srcset="" sizes="(max-width: 278px) 100vw, 278px">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="TechEU" aria-label="Go to the site TechEU">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/TechEU.webp" alt="TechEU" srcset="" sizes="(max-width: 182px) 100vw, 182px">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="TNW" aria-label="Go to the site TNW">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/02/TNW.webp" alt="Thenextweb" srcset="" sizes="(max-width: 214px) 100vw, 214px">
+						</a>
+					
+				
+											<a href="#" target="_blank" class="logo" title="HubSpot" aria-label="Go to the site HubSpot">
+							<img fetchpriority="high" src="https://waveup.com/wp-content/uploads/2024/08/HubSpot.svg" alt="" srcset="" sizes="">
+						</a> 
+          </div> 
+        </div>
+      </section>
+           
+
+ <!-- <section id="contact-new-block_f8b10e01159b569417e1a9a9b85586d0" class="contact-new bg-[#cee4f1]">
+                <div class="contact-new__container mons">
+                    <div class="contact-new__content">
+                        <h2 class="contact-new__title text-[#070763] h2 mons">Ready to Raise Smarter?</h2>
+                        <p class="contact-new__text text-[#070763]">Don’t leave your fundraising to luck. </p>
+ 
+                    </div>
+                    <form id="contactForm" class="contact-new__form" action="" >
+                      <p class="contact-new__form-subtitle">
+                            Book your strategy call and launch your raise engine now.
+                        </p>
+                        <div class="item">
+                            <span class="item__label">Your name:</span>
+                            <input type="text" name="client_name" class="item__input" placeholder="Enter your name">
+                        </div>
+                        <div class="item">
+                            <span class="item__label">*Your email:</span>
+                            <input type="email" name="email" class="item__input" placeholder="Enter your email" required=''>
+                        </div>
+                        <div class="item item-requests">
+                            <span class="item__label">*You need help with:</span>
+                            <div class="item__dropdown dropdown">
+                                <ul class="dropdown__input item__input">
+                                    <li class="_default">
+                                        <span class="_default">Select options</span>
+                                     </li>
+                                </ul>
+                                <div class="dropdown__content">
+                                    <label>
+                                        <input type="checkbox" name="requests" value="Pitch deck" data-name="VC-ready pitch deck">
+                                        <span>VC-ready pitch deck</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="requests" value="Financial model" data-name="Financial forecast">
+                                        <span>Financial forecast</span>
+                                    </label>
+                                    <label class="_disabled">
+                                        <input type="checkbox" name="requests" value="Investor outreach" data-name="Find investors">
+                                        <span>
+                                            Find investors <span>(FULLY SUBSCRIBED)</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="requests" value="Design" data-name="Slides design">
+                                        <span>Slides design</span>
+                                    </label>
+  </label>
+  <label>
+    <input type="checkbox" name="requests" value="Other" data-name="Other">
+    <span>Other</span>
+  </label>
+  </div></div></div>
+  <div class="item">
+    <span class="item__label">Your project is:</span>
+    <input type="text" name="project" class="item__input" placeholder="Subscription based AI platform">
+  </div>
+  <div class="item">
+    <span class="item__label">Your current stage:</span>
+    <input type="text" name="stage" class="item__input" placeholder="Seed stage">
+  </div>
+  <div class="item">
+    <span class="item__label">Your maximum budget:</span>
+    <input type="text" name="budget" class="item__input" placeholder="$6 000">
+  </div>
+  <div class="item">
+    <span class="item__label">How did you find us?</span>
+    <input type="text" name="client_source" class="item__input" placeholder="Google">
+  </div>
+  <input type="hidden" name="mc_audience" value="c44a717c87">
+  <input type="hidden" name="reply_list" value="">
+  <input type="hidden" name="formname" value="contactForm">
+  <button type="submit" class="btn">Submit</button>
+  <p class="success__text">Form submitted successfully.</p>
+  </form>
+     </div>
+  <svg class="contact-new__bg-1" width="1325" height="762" viewbox="0 0 1325 762" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_1449_834)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M520.848 490.549C433.951 530.636 371.918 541.692 306.265 560.571C242.057 579.033 156.531 607.653 150.889 596.931C145.224 586.165 211.995 546.504 279.317 509.355C336.905 477.577 412.228 441.968 486.578 411.693C550.342 385.729 584.823 380.521 637.972 363.314C707.841 340.695 1169.96 144.837 1174.53 155.608C1179.1 166.381 708.3 367.298 653.673 400.306C595.531 435.438 608.464 450.131 520.848 490.549Z" fill="#00008b"/>
+    </g>
+    <g filter="url(#filter1_f_1449_834)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M501.219 446.976C413.386 484.91 357.762 510.714 296 538.546C235.598 565.764 153.517 602.313 153.185 603.807C152.851 605.308 223.911 575.517 294.413 545.686C354.722 520.167 431.203 487.224 504.732 455.059C567.791 427.474 598.332 413.199 649.106 390.529C715.854 360.727 1175.96 160.254 1175.39 159.194C1174.82 158.134 705.511 362.474 647.149 386.889C585.031 412.874 589.778 408.729 501.219 446.976Z" fill="#8788FF"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_1449_834" x="0.552734" y="5.1792" width="1324.01" height="744.088" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"/>
+            <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <fegaussianblur stddeviation="75" result="effect1_foregroundBlur_1449_834"/>
+        </filter>
+        <filter id="filter1_f_1449_834" x="83.1836" y="89.1895" width="1162.21" height="584.672" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"/>
+            <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <fegaussianblur stddeviation="35" result="effect1_foregroundBlur_1449_834"/>
+        </filter>
+    </defs>
+  </svg>
+  <svg class="contact-new__bg-2" width="1255" height="881" viewbox="0 0 1255 881" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_1449_734)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M502.839 308.777C422.302 257.087 362.386 237.58 299.965 209.826C238.918 182.683 158.156 142.541 151.089 152.382C143.994 162.263 204.655 210.756 266.21 256.835C318.864 296.253 388.555 341.911 458.019 382.152C517.592 416.663 551.026 426.577 601.293 450.951C667.374 482.991 1098.06 740.719 1104.07 730.682C1110.09 720.641 671.499 456.706 621.946 416.478C569.206 373.663 584.042 360.894 502.839 308.777Z" fill="#00008b"/>
+    </g>
+    <g filter="url(#filter1_f_1449_734)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M477.386 349.225C395.625 299.538 344.092 266.308 286.759 230.224C230.689 194.934 154.434 147.413 154.311 145.887C154.187 144.354 220.459 183.663 286.172 222.933C342.385 256.526 413.591 299.704 481.98 341.703C540.632 377.723 568.912 396.074 616.074 425.531C678.073 464.255 1106.13 726.277 1105.42 727.248C1104.71 728.22 668.07 461.098 613.633 428.867C555.694 394.562 559.823 399.322 477.386 349.225Z" fill="#8788FF"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_1449_734" x="0.521973" y="0.862061" width="1253.61" height="880.105" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"/>
+            <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <fegaussianblur stddeviation="75" result="effect1_foregroundBlur_1449_734"/>
+        </filter>
+        <filter id="filter1_f_1449_734" x="84.3105" y="75.8435" width="1091.11" height="721.407" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"/>
+            <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <fegaussianblur stddeviation="35" result="effect1_foregroundBlur_1449_734"/>
+        </filter>
+    </defs>
+  </svg>
+  </section> -->
+
+  <footer id="footer" class="footer bg--dark">
+    <div class="footer__container">
+        <div class="footer__menus">
+            <div class="footer__menu_wrap">
+                <p class="footer__menu_title">Colsana</p>
+                <ul id="footer__menu_1" class="footer__menu">
+                    
+                    <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
+                        <a href="whatwedo.html"> What We Do</a>
+                    </li>
+                    <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
+                        <a href="whyclosana.html"> Why Colsana</a>
+                    </li>
+    
+                </ul>
+            </div>
+            <div class="footer__menu_wrap">
+                <p class="footer__menu_title">Our company</p>
+                <ul id="footer__menu_2" class="footer__menu">
+                    
+                    <li id="menu-item-16182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16182">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88">
+                        <a rel="nofollow" href="trustsection.html">Articles Featured</a>
+                    </li>
+                    
+                     
+                </ul>
+            </div>
+            <div class="footer__menu_wrap">
+                <p class="footer__menu_title">Information</p>
+                <ul id="footer__menu_3" class="footer__menu">
+                    <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-94">
+                        <a rel="nofollow privacy-policy" href="privacypolicy.html">Privacy Policy</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe">
+            <p class="subscribe__title">Subscribe to newsletter</p>
+            <form id="subscribeForm" action="" class="subscribe__form"  >
+                <input type="email" name="email" class="subscribe__form_input" placeholder="Enter your email">
+                <input type="hidden" name="mc_audience" value="c44a717c87">
+                <input type="hidden" name="reply_list" value="">
+                <input type="hidden" name="formname" value="subscribeForm">
+                <button type="submit" class="subscribe__form_btn">Subscribe</button>
+                <p class="subscribe__form_success success__text">Thank you, your sign-up request was successful!</p>
+            </form>
+ 
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy">
+                <p>
+                    © 2025 Closana  | All Rights Reserved  |  
+                    | <a href="privacypolicy.html" rel="nofollow">Privacy Policy</a>
+                </p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <link rel="stylesheet" id="block-acf-section-css" href="https://waveup.com/wp-content/themes/waveup/template-parts/gutenberg/section/section.css?ver=6.4.0.1" type="text/css" media="all">
+
+  <div class="modal-overlay modal-contact-us" id="modal-contact-us">
+    <div class="modal-overlay__container" style="margin-bottom: 130px; margin-top: 130px;">
+        <div class="modal-content">
+            <div class="close-button"></div>
+            <div class="modal-contact-us__title">
+              Got a <span>vision you're building?</span>
+            </div>
+            <p class="modal-contact-us__subtitle">
+              Leave your information below and one of our <br class="_desctop">experts will be in touch to schedule a call.
+  
+            <form id="contactUsModal" action="" class="modal-contact-us__form">
+                <div class="item">
+                    <span class="item__label">Your name:</span>
+                    <input type="text" name="client_name" class="item__input" placeholder="Enter your name">
+                </div>
+                <div class="item">
+                    <span class="item__label">*Your email:</span>
+                    <input type="email" name="email" class="item__input" placeholder="Enter your email" required=''>
+                </div>
+                <div class="item item-requests">
+                    <span class="item__label">*You need help with:</span>
+                    <div class="item__dropdown dropdown">
+                        <ul class="dropdown__input item__input">
+                            <li class="_default">
+                                <span class="_default">Select options</span>
+                                <!-- <span class="close"></span> -->
+                            </li>
+                        </ul>
+                        <div class="dropdown__content">
+                            <label>
+                                <input type="checkbox" name="requests" value="Pitch deck" data-name="VC-ready pitch deck">
+                                <span>VC-ready pitch deck</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="requests" value="Financial model" data-name="Financial forecast">
+                                <span>Financial forecast</span>
+                            </label>
+                            <label class="_disabled">
+                                <input type="checkbox" name="requests" value="Investor outreach" data-name="Find investors">
+                                <span>
+                                    Find investors <span>(FULLY SUBSCRIBED)</span>
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="requests" value="Design" data-name="Slides design">
+                                <span>Slides design</span>
+                            </label>
+  </label>
+  <label>
+    <input type="checkbox" name="requests" value="Other" data-name="Other">
+    <span>Other</span>
+  </label>
+  </div></div></div>
+  <div class="item">
+    <span class="item__label">Your project is:</span>
+    <input type="text" name="project" class="item__input" placeholder="Subscription based AI platform">
+  </div>
+  <div class="item">
+    <span class="item__label">Your current stage:</span>
+    <input type="text" name="stage" class="item__input" placeholder="Seed stage">
+  </div>
+  <div class="item">
+    <span class="item__label">Your maximum budget:</span>
+    <input type="text" name="budget" class="item__input" placeholder="$6 000">
+  </div>
+  <div class="item">
+    <span class="item__label">How did you find us?</span>
+    <input type="text" name="client_source" class="item__input" placeholder="Google">
+  </div>
+  <input type="hidden" name="mc_audience" value="c44a717c87">
+  <input type="hidden" name="reply_list" value="">
+  <input type="hidden" name="formname" value="modalContactUs">
+  <button type="submit" class="btn">Submit</button>
+  <p class="success__text">Thank you, your sign-up request was successful!</p>
+  </form>
+  </div>
+  </div>
+  </div>
+  <!-- END HIDDEN ELEMENTS (MODALS)-->
+  </div>
+ 
+ 
+    <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      const mainContent = document.getElementById("main-content");
+      const popup = document.getElementById("popup");
+  
+      // Show preloader for 3 seconds
+      setTimeout(() => {
+        // Hide preloader
+        preloader.style.display = "none";
+  
+        // Show main content with fade-in
+        mainContent.style.display = "block";
+        setTimeout(() => {
+          mainContent.style.opacity = 1;
+        }, 50);
+         }, 3000); // preloader duration
+    });
+  </script>
+     <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var bglazyloadImages;
+        if ("IntersectionObserver"in window) {
+            bglazyloadImages = document.querySelectorAll(".lazyload-bg");
+            var bgimageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var bgimage = entry.target;
+                        bgimage.classList.remove("lazyload-bg");
+                        bgimageObserver.unobserve(bgimage);
+                    }
+                });
+            }
+            );
+            bglazyloadImages.forEach(function(image) {
+                bgimageObserver.observe(image);
+            });
+        } else {
+            var bglazyloadThrottleTimeout;
+            bglazyloadImages = document.querySelectorAll(".lazyload-bg");
+            function bglazyload() {
+                if (bglazyloadThrottleTimeout) {
+                    clearTimeout(bglazyloadThrottleTimeout);
+                }
+                bglazyloadThrottleTimeout = setTimeout(function() {
+                    var bgscrollTop = window.pageYOffset;
+                    bglazyloadImages.forEach(function(img) {
+                        if (img.offsetTop < (window.innerHeight + bgscrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazyload-bg');
+                        }
+                    });
+                    if (bglazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", bglazyload);
+                        window.removeEventListener("resize", bglazyload);
+                        window.removeEventListener("orientationChange", bglazyload);
+                    }
+                }, 20);
+            }
+            document.addEventListener("scroll", bglazyload);
+            window.addEventListener("resize", bglazyload);
+            window.addEventListener("orientationChange", bglazyload);
+        }
+    })
+  </script>
+    
+  <style id='acf-as-featured-in-new-style-inline-css' type='text/css'>
+    .as-featured-in-new {
+        text-align: center;
+        padding: 50px 0 60px;
+        position: relative;
+    }
+  
+    .as-featured-in-new__title {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+    }
+  
+    .as-featured-in-new__items {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 39px 25px;
+        flex-wrap: wrap;
+        margin-top: 34px;
+    }
+  
+    .as-featured-in-new__items .logo {
+        position: relative;
+        transition: var(--transition);
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .as-featured-in-new__items .logo:hover {
+        opacity: 1;
+    }
+  
+    .as-featured-in-new__items .logo img {
+        width: auto;
+        height: 49px;
+        display: block;
+    }
+  
+    @media (max-width: 760px) {
+        .as-featured-in-new__title {
+            font-size: 14px;
+        }
+  
+        .as-featured-in-new__items .logo img {
+            height: 38px;
+        }
+  
+        .as-featured-in-new__items .logo {
+            opacity: 1;
+        }
+    }
+  </style>
+  <style id='acf-indicators-style-inline-css' type='text/css'>
+    .indicators {
+        padding: var(--sp) 0 70px;
+        border-top: 1px solid #313540;
+    }
+  
+    .indicators__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+  
+    .indicators__content {
+        width: 344px;
+    }
+  
+    .indicators__subtitle {
+        margin-top: 24px;
+        color: #EFEFEF;
+    }
+  
+    .indicators__btn {
+        margin-top: 40px;
+    }
+  
+    .indicators__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 70px 0;
+        width: 625px;
+    }
+  
+    .indicators__items .item {
+        width: calc(50% - 40px);
+    }
+  
+    .indicators__items .item__uptitle {
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 1.96px;
+        text-transform: uppercase;
+        color: #6F6FFA;
+    }
+  
+    .indicators__items .item__title {
+        color: #e4e4ea;
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 105%;
+    }
+  
+    .indicators__items .item__uptitle + .item__title {
+        color: #fff;
+    }
+  
+    .indicators__items .item__subtitle {
+        margin-top: 11px;
+        line-height: 150%;
+        color: #EFEFEF;
+    }
+  
+    @media (max-width: 1200px) {
+        .indicators__content {
+            width: auto;
+            margin-bottom: 50px;
+        }
+  
+        .indicators__items .item__title {
+            font-size: 36px;
+        }
+  
+        .indicators__items .item {
+            width: calc(50% - 20px);
+        }
+    }
+  
+    @media (max-width: 760px) {
+        .indicators__items .item__uptitle {
+            font-size: 12px;
+        }
+    }
+  </style>
+   
+  <link rel='stylesheet' id='acf-stories-new-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/stories-new/stories-new.css?ver=6.8' type='text/css' media='all'/>
+  <link rel='stylesheet' id='acf-offers-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/offers/offers.css?ver=6.8' type='text/css' media='all'/>
+  
+  <link rel='stylesheet' id='acf-reviews-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/reviews/reviews.css?ver=6.8' type='text/css' media='all'/>
+   
+  <!-- <link rel='stylesheet' id='acf-contact-new-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/contact-new/contact-new.css?ver=6.8' type='text/css' media='all'/> -->
+  <style id='global-styles-inline-css' type='text/css'>
+    :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--color--blue: #00008b;
+        --wp--preset--color--gray: #F7F8FD;
+        --wp--preset--color--dark: #0D111C;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+        --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+        --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+        --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+        --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+        --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+        --wp--preset--gradient--default: linear-gradient(90.16deg, #6368DE 0.18%, #A048F6 99.9%);
+        --wp--preset--font-size--small: 16px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 32px;
+        --wp--preset--font-size--x-large: 2.25rem;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+    }
+  
+    :where(body) {
+        margin: 0;
+    }
+  
+    .wp-site-blocks {
+        padding-top: var(--wp--style--root--padding-top);
+        padding-bottom: var(--wp--style--root--padding-bottom);
+    }
+  
+    .has-global-padding {
+        padding-right: var(--wp--style--root--padding-right);
+        padding-left: var(--wp--style--root--padding-left);
+    }
+  
+    .has-global-padding > .alignfull {
+        margin-right: calc(var(--wp--style--root--padding-right) * -1);
+        margin-left: calc(var(--wp--style--root--padding-left) * -1);
+    }
+  
+    .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+  
+    .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  
+    .wp-site-blocks > .alignleft {
+        float: left;
+        margin-right: 2em;
+    }
+  
+    .wp-site-blocks > .alignright {
+        float: right;
+        margin-left: 2em;
+    }
+  
+    .wp-site-blocks > .aligncenter {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    :where(.wp-site-blocks) > * {
+        margin-block-start: 24px; margin-block-end: 0; }
+  
+    :where(.wp-site-blocks) > :first-child {
+        margin-block-start: 0; }
+  
+    :where(.wp-site-blocks) > :last-child {
+        margin-block-end: 0; }
+  
+    :root {
+        --wp--style--block-gap: 24px;
+    }
+  
+    :root :where(.is-layout-flow) > :first-child {
+        margin-block-start: 0;}
+  
+    :root :where(.is-layout-flow) > :last-child {
+        margin-block-end: 0;}
+  
+    :root :where(.is-layout-flow) > * {
+        margin-block-start: 24px;margin-block-end: 0;}
+  
+    :root :where(.is-layout-constrained) > :first-child {
+        margin-block-start: 0;}
+  
+    :root :where(.is-layout-constrained) > :last-child {
+        margin-block-end: 0;}
+  
+    :root :where(.is-layout-constrained) > * {
+        margin-block-start: 24px;margin-block-end: 0;}
+  
+    :root :where(.is-layout-flex) {
+        gap: 24px;
+    }
+  
+    :root :where(.is-layout-grid) {
+        gap: 24px;
+    }
+  
+    .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;margin-inline-end: 2em;}
+  
+    .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;margin-inline-end: 0;}
+  
+    .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+  
+    .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;margin-inline-end: 2em;}
+  
+    .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;margin-inline-end: 0;}
+  
+    .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+  
+    .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+  
+    body .is-layout-flex {
+        display: flex;
+    }
+  
+    .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+  
+    .is-layout-flex > :is(*, div) {
+        margin: 0;
+    }
+  
+    body .is-layout-grid {
+        display: grid;
+    }
+  
+    .is-layout-grid > :is(*, div) {
+        margin: 0;
+    }
+  
+    body {
+        --wp--style--root--padding-top: 0px;
+        --wp--style--root--padding-right: 0px;
+        --wp--style--root--padding-bottom: 0px;
+        --wp--style--root--padding-left: 0px;
+    }
+  
+    a:where(:not(.wp-element-button)) {
+        text-decoration: underline;
+    }
+  
+    :root :where(.wp-element-button, .wp-block-button__link) {
+        background-color: #32373c;
+        border-width: 0;
+        color: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        text-decoration: none;
+    }
+  
+    .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+    }
+  
+    .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+  
+    .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+    }
+  
+    .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+    }
+  
+    .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+    }
+  
+    .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+  
+    .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+  
+    .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+  
+    .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+  
+    .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+  
+    .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+  
+    .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+    }
+  
+    .has-blue-color {
+        color: var(--wp--preset--color--blue) !important;
+    }
+  
+    .has-gray-color {
+        color: var(--wp--preset--color--gray) !important;
+    }
+  
+    .has-dark-color {
+        color: var(--wp--preset--color--dark) !important;
+    }
+  
+    .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+    }
+  
+    .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+  
+    .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+    }
+  
+    .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+    }
+  
+    .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+    }
+  
+    .has-luminous-vivid-orange-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+  
+    .has-luminous-vivid-amber-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+  
+    .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+  
+    .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+  
+    .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+  
+    .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+  
+    .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+  
+    .has-blue-background-color {
+        background-color: var(--wp--preset--color--blue) !important;
+    }
+  
+    .has-gray-background-color {
+        background-color: var(--wp--preset--color--gray) !important;
+    }
+  
+    .has-dark-background-color {
+        background-color: var(--wp--preset--color--dark) !important;
+    }
+  
+    .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+    }
+  
+    .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+  
+    .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+    }
+  
+    .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+    }
+  
+    .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+    }
+  
+    .has-luminous-vivid-orange-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+  
+    .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+  
+    .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+  
+    .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+  
+    .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+  
+    .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+  
+    .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+  
+    .has-blue-border-color {
+        border-color: var(--wp--preset--color--blue) !important;
+    }
+  
+    .has-gray-border-color {
+        border-color: var(--wp--preset--color--gray) !important;
+    }
+  
+    .has-dark-border-color {
+        border-color: var(--wp--preset--color--dark) !important;
+    }
+  
+    .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+    }
+  
+    .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+    }
+  
+    .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+    }
+  
+    .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+    }
+  
+    .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+    }
+  
+    .has-cool-to-warm-spectrum-gradient-background {
+        background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+    }
+  
+    .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+    }
+  
+    .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+    }
+  
+    .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+    }
+  
+    .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+    }
+  
+    .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+    }
+  
+    .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+    }
+  
+    .has-default-gradient-background {
+        background: var(--wp--preset--gradient--default) !important;
+    }
+  
+    .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+    }
+  
+    .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+    }
+  
+    .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+    }
+  
+    .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+    }
+  </style>
+   
+   
+  <link rel='stylesheet' id='acf-stories-new-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/stories-new/stories-new.css?ver=6.8' type='text/css' media='all'/>
+  <link rel='stylesheet' id='acf-offers-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/offers/offers.css?ver=6.8' type='text/css' media='all'/>
+ 
+  <link rel='stylesheet' id='acf-reviews-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/reviews/reviews.css?ver=6.8' type='text/css' media='all'/>
+  
+  <!-- <link rel='stylesheet' id='acf-contact-new-style-css' href='https://waveup.com/wp-content/themes/waveup/blocks/contact-new/contact-new.css?ver=6.8' type='text/css' media='all'/> -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+   
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js?ver=6.8" id="jq-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/cookie.js?ver=6.8" id="cookie-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.cookie.js?ver=6.8" id="jquery.cookie-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/validator.js?ver=6.8" id="validator-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/popup_script.js?ver=6.8" id="popup_script-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/counter2up.js?ver=6.8" id="counter2up-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/aos.js?ver=6.8" id="aos-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.waypoints.js?ver=6.8" id="waypoints-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/swiper-bundle.min.js?ver=6.8" id="swiper-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.countdown.js?ver=6.8" id="jquery.countdown-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/countdown.js?ver=6.8" id="countdown-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/typewriter.js?ver=6.8" id="typewriter-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/secondaryUtm.js?ver=6.8" id="secondary_utm-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/blocks/reviews/reviews.js?ver=6.8" id="reviews-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/blocks/consulting/consulting.js?ver=6.8" id="consulting-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/blocks/stories-new/stories-new.js?ver=6.8" id="stories-new-js"></script>
+  <script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/main.js?ver=6.8" id="main-js"></script>
+  </body>
+</html>

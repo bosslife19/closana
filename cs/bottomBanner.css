@@ -1,0 +1,256 @@
+.bottom-banner {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+}
+
+.bottom-banner__container {
+  max-width: 990px !important;
+}
+
+.bottom-banner__wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 33px;
+  border-radius: 5px;
+  background: var(--accent);
+}
+
+.bottom-banner__text,
+.bottom-banner__date {
+  font-size: 16px;
+  line-height: 170%;
+  color: #efefef;
+}
+
+.bottom-banner__text {
+  font-weight: 600;
+}
+
+.bottom-banner__date {
+  margin-left: 18px;
+  padding-left: 18px;
+  border-left: 1px solid #fff;
+  font-weight: 400;
+}
+
+.bottom-banner__timer {
+  margin: 0 auto;
+}
+
+a.bottom-banner__btn {
+  background: #fff;
+}
+
+a.bottom-banner__btn span {
+  color: var(--accent);
+}
+
+a.bottom-banner__btn .arr {
+  opacity: 0;
+}
+
+a.bottom-banner__btn:hover .arr {
+  opacity: 1;
+}
+
+.bottom-banner__close {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  /* margin-left: 42px; */
+  margin-left: auto;
+  transition: var(--transition);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cg clip-path='url(%23clip0_2299_1304)'%3E%3Cpath d='M5.91615 5.00827L9.80995 1.11435C10.0634 0.861071 10.0634 0.451547 9.80995 0.198263C9.55667 -0.0550201 9.14715 -0.0550201 8.89386 0.198263L4.99994 4.09218L1.10614 0.198263C0.85274 -0.0550201 0.443335 -0.0550201 0.190051 0.198263C-0.0633505 0.451547 -0.0633505 0.861071 0.190051 1.11435L4.08385 5.00827L0.190051 8.90219C-0.0633505 9.15548 -0.0633505 9.565 0.190051 9.81829C0.316278 9.94463 0.482247 10.0081 0.648097 10.0081C0.813947 10.0081 0.979797 9.94463 1.10614 9.81829L4.99994 5.92437L8.89386 9.81829C9.02021 9.94463 9.18606 10.0081 9.35191 10.0081C9.51776 10.0081 9.68361 9.94463 9.80995 9.81829C10.0634 9.565 10.0634 9.15548 9.80995 8.90219L5.91615 5.00827Z' fill='white' fill-opacity='0.45'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2299_1304'%3E%3Crect width='10' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+    center/contain no-repeat;
+}
+
+.bottom-banner__close:hover {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cg clip-path='url(%23clip0_2299_1304)'%3E%3Cpath d='M5.91615 5.00827L9.80995 1.11435C10.0634 0.861071 10.0634 0.451547 9.80995 0.198263C9.55667 -0.0550201 9.14715 -0.0550201 8.89386 0.198263L4.99994 4.09218L1.10614 0.198263C0.85274 -0.0550201 0.443335 -0.0550201 0.190051 0.198263C-0.0633505 0.451547 -0.0633505 0.861071 0.190051 1.11435L4.08385 5.00827L0.190051 8.90219C-0.0633505 9.15548 -0.0633505 9.565 0.190051 9.81829C0.316278 9.94463 0.482247 10.0081 0.648097 10.0081C0.813947 10.0081 0.979797 9.94463 1.10614 9.81829L4.99994 5.92437L8.89386 9.81829C9.02021 9.94463 9.18606 10.0081 9.35191 10.0081C9.51776 10.0081 9.68361 9.94463 9.80995 9.81829C10.0634 9.565 10.0634 9.15548 9.80995 8.90219L5.91615 5.00827Z' fill='white' fill-opacity='1'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2299_1304'%3E%3Crect width='10' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+    center/contain no-repeat;
+}
+
+.countdownHolder {
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: -3px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+}
+
+.countdownHolder .countelement {
+  display: flex;
+}
+
+.countdownHolder .position {
+  display: inline-block;
+  height: 1.1em;
+  overflow: hidden;
+  position: relative;
+  width: 0.6em;
+}
+
+.countdownHolder .digit {
+  position: absolute;
+  display: block;
+  border-radius: 0.2em;
+  text-align: center;
+  letter-spacing: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdownHolder .countDiv {
+  padding: 0 7px;
+}
+
+.countdownHolder .countDiv:before {
+  content: ":";
+}
+
+.countdownHolder .textdigit {
+  display: none;
+}
+
+.countdownHolder .countDays::after {
+  content: "d";
+  margin-right: 15px;
+}
+
+.countdownHolder .countDiv0 {
+  display: none;
+}
+
+@media (min-width: 1600px) {
+  .bottom-banner__container {
+    max-width: var(--container-width) !important;
+  }
+
+  .bottom-banner__wrap {
+    display: flex;
+    align-items: center;
+    padding: 18px 51px;
+  }
+
+  .bottom-banner__text,
+  .bottom-banner__date {
+    font-size: 16px;
+  }
+
+  .bottom-banner__date {
+    margin-left: 22px;
+    padding-left: 21px;
+  }
+
+  .bottom-banner__close {
+    width: 12px;
+    height: 12px;
+    margin-left: 56px;
+  }
+
+  .countdownHolder {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bottom-banner {
+    bottom: 0;
+  }
+
+  .bottom-banner__container {
+    max-width: var(--container-width) !important;
+  }
+
+  .bottom-banner__wrap {
+    position: relative;
+    padding: 18px 0;
+  }
+
+  .bottom-banner__wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    border-radius: 5px 5px 0 0;
+    background: var(--accent);
+    z-index: -1;
+  }
+
+  a.bottom-banner__btn {
+    margin: 10px auto 0;
+  }
+
+  .bottom-banner__close {
+    position: absolute;
+    top: 12px;
+    right: -22px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 760px) {
+  .bottom-banner__text,
+  .bottom-banner__date,
+  .countdownHolder {
+    color: #dddef0;
+  }
+  .bottom-banner__text,
+  .bottom-banner__date {
+    font-size: 10px;
+  }
+
+  .bottom-banner__date {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .bottom-banner__timer {
+    width: 100%;
+    margin: 9px 0 0 0;
+  }
+
+  .bottom-banner__timer .countdownHolder {
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+
+  a.bottom-banner__btn {
+    height: fit-content;
+    background-color: transparent;
+    margin: 8px 0 0 0;
+    padding: 0;
+  }
+
+  a.bottom-banner__btn span {
+    color: #fff;
+  }
+
+  a.bottom-banner__btn .arr {
+    opacity: 1;
+    position: relative;
+    transform: none;
+    top: auto;
+    right: auto;
+    margin-left: 7px;
+  }
+
+  a.bottom-banner__btn .arr path {
+    fill: #fff;
+  }
+
+  .bottom-banner__close {
+    top: 7px;
+    right: -13px;
+  }
+}

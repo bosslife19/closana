@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<!-- <link rel="preload" href="/fonts/Aeroport-Bold/Aeroport-Bold.woff2" as="font" type="font/woff2" crossorigin> -->
+            
+     <link rel="stylesheet" href="cs/styles.css">
+     <link rel="stylesheet" href="cs/swipper.css">
+     <link rel="stylesheet" href="cs/section.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&amp;display=swap" rel="stylesheet">
+		 	
+	<!-- This site is optimized with the Yoast SEO plugin v24.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Pitch Deck Design Services | $610M+ raised, 80+ industry verticals</title>
+ 
+<link rel="stylesheet" id="gdpr-css" href="https://waveup.com/wp-content/plugins/gdpr/dist/css/public.css?ver=2.1.2" type="text/css" media="all">
+<link rel="stylesheet" id="libs-css" href="https://waveup.com/wp-content/themes/waveup/css/libs.css?ver=6.8" type="text/css" media="all">
+<link rel="stylesheet" id="bottom-banner-css" href="https://waveup.com/wp-content/themes/waveup/css/bottom-banner.css?ver=6.8" type="text/css" media="all">
+<link rel="stylesheet" id="main-css" href="https://waveup.com/wp-content/themes/waveup/css/main.css?ver=6.8" type="text/css" media="all">
+<script type="text/javascript" src="https://waveup.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+ 
+
+		<script src="https://waveup.com/wp-content/themes/waveup/js/modernizr-custom.js"></script>
+ 		<!-- End Google Tag Manager -->
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				setTimeout(initGTM, 3500);
+			});
+			document.addEventListener('scroll', initGTMOnEvent);
+			document.addEventListener('mousemove', initGTMOnEvent);
+			document.addEventListener('touchstart', initGTMOnEvent);
+			function initGTMOnEvent(event) {
+				initGTM();
+				event.currentTarget.removeEventListener(event.type, initGTMOnEvent); // remove the event listener that got triggered
+			}
+			function initGTM() {
+				if (window.gtmDidInit) {
+					return false;
+				}
+				window.gtmDidInit = true; // flag to ensure script does not get added to DOM more than once.
+				const script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.onload = () => {
+					dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime(), 'gtm.uniqueEventId': 0 });
+				};
+				script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-T9KKQRZ';
+				document.head.appendChild(script);
+			}
+		</script>
+        <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+        
+            body,
+            html {
+              height: 100%;
+              font-family: sans-serif;
+            }
+        
+            #preloader {
+              background: #111;
+              color: #fff;
+              height: 100vh;
+              width: 100%;
+              position: fixed;
+              top: 0;
+              left: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 9999;
+              overflow: hidden;
+            }
+        
+            .containers {
+              position: relative;
+              font-size: 4rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+        
+            .text {
+              position: absolute;
+              opacity: 1;
+              transform-origin: center;
+              animation-fill-mode: forwards;
+            }
+        
+            .clo {
+              left: 0;
+              animation: spinUpClockwise 2s ease-in-out forwards;
+            }
+        
+            .sana {
+              right: 0;
+              animation: spinUpCounterClockwise 2s ease-in-out forwards;
+            }
+        
+            @keyframes spinUpClockwise {
+              0% {
+                transform: rotate(0deg) translateY(0);
+                opacity: 1;
+              }
+              80% {
+                transform: rotate(180deg) translateY(-200px);
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+        
+            @keyframes spinUpCounterClockwise {
+              0% {
+                transform: rotate(0deg) translateY(0);
+                opacity: 1;
+              }
+              80% {
+                transform: rotate(-180deg) translateY(-200px);
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+        
+            .dashes {
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -200px);
+              display: flex;
+              gap: 10px;
+              animation: showDashes 1s ease-in-out 2s forwards;
+            }
+        
+            @keyframes showDashes {
+              from {
+                opacity: 0;
+                transform: translate(-50%, -200px) scale(0.8) rotate(-20deg);
+              }
+              to {
+                opacity: 1;
+                transform: translate(-50%, -200px) scale(1) rotate(0deg);
+              }
+            }
+        
+            .dash {
+              width: 4px;
+              background: white;
+              transform: rotate(45deg);
+              border-radius: 2px;
+              opacity: 0.9;
+            }
+        
+            .dash.short {
+              height: 30px;
+            }
+        
+            .dash.tall {
+              height: 45px;
+            }
+        
+            /* Content hidden initially */
+            #main-content {
+              display: none;
+              opacity: 0;
+              transition: opacity 1s ease;
+              
+            }
+          </style>
+    </head>
+<body class="wp-singular page-template-default page page-id-200 wp-theme-waveup" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" cz-shortcut-listen="true"><div id="heurio-app" class="heurio-app" version="2.5.01.13"><div class="heurio-overlay"><!----><!----></div><!---->
+</div>
+<!-- <div id="preloader">
+    <div class="containers">
+      <div class="text clo">SANA</div>
+      <div class="text sana">CLO</div>
+      <div class="dashes">
+        <div class="dash short"></div>
+        <div class="dash tall"></div>
+        <div class="dash short"></div>
+      </div>
+    </div>
+  </div>     -->
+  <div class="wrapper" style="opacity: 0;">
+
+        <header class="header header--white" id="header">
+            <div class="header__container">
+                <a class="header__logos" href="index.html" aria-label="closana logo"></a>
+
+                    <ul id="header__menu" class="header__menu"><li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-200 current_page_item menu-item-has-children menu-item-231"><a href="WhatWeOffer.html" aria-current="page">What we offer</a>
+            <div class="sub-menu-wrap first_level_menu"><div class="search-industry"><form role="search" method="get" class="search-industry-form" action="#"><div class="search-industry-input"><div class="search-industry-icon"></div><input type="text" placeholder="Search for existing industry..."></div><div class="search-industry-results"></div><input type="hidden" name="utm_source" value="(direct)"><input type="hidden" name="utm_medium" value="(none)"><input type="hidden" name="traffic_channel" value="(none)"><input type="hidden" name="utm_campaign" value="(not set)"><input type="hidden" name="language" value="en-US"><input type="hidden" name="page_path" value="/what-we-do/"><input type="hidden" name="device_category" value="desktop"><input type="hidden" name="date" value="4/18/2025, 8:10:33 AM"><input type="hidden" name="first_visit_date" value="4/12/2025, 3:42:09 AM"><input type="hidden" name="session_source" value="waveup.com"><input type="hidden" name="country" value="NG"><input type="hidden" name="city" value="Abuja"><input type="hidden" name="ip" value="102.91.4.41"></form></div><ul class="sub-menu row">
+            <li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-82"><a href="fundraise.html">Fundraising Support</a>
+            <div class="sub-menu-wrap second_level_menu">
+                <ul class="sub-menu row">
+                <li id="menu-item-10089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10089"><a href="investment.html">Investment Materials Creation</a>
+                <div class="sub-menu-wrap  ">
+                    <ul class="sub-menu">
+                </ul>
+            </div>
+            </li>
+                 <div class="sub-menu-wrap third_level_menu">
+                    <ul class="sub-menu">
+                 </ul>
+            </div>
+            </li>
+                 <div class="sub-menu-wrap third_level_menu"><ul class="sub-menu">
+                </ul>
+            </div>
+            </li>
+                <li id="menu-item-11395" class="disabled menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11395"><a href="#">Funding Stages</a>
+                <div class="sub-menu-wrap third_level_menu"><ul class="sub-menu">
+                    <li id="menu-item-11396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11396"><a href="Pre-seedSeriaA.html">Series A funding advisory</a></li>
+                </ul></div>
+            </li>
+            </ul></div>
+            </li>
+             
+            </li>
+            <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-83"><a href="growthStrategy.html">Growth &amp; Strategy</a>
+            
+            </li>
+           
+            </ul>
+        </div>
+            </li>
+            
+            </li>
+            <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771 inter">
+                <a href="Team.html">Partners</a>
+            </li>
+            <li id="menu-item-16525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16525">
+                <a href="prcing.html">Pricing</a>
+            </li>
+            <li id="menu-item-16464" class="button button--contact menu-item menu-item-type-custom menu-item-object-custom menu-item-16464">
+                <a href="#modal-contact-us">Contact us</a>
+            </li>             </ul>
+                                  
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+ 
+ 
+    <section id="team"  class="bg--dark py-20" id="team" style="background-image:linear-gradient(to right, #ffffffed, #00000057), url(assests/bgwitws.jpg);">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-4xl inter font-extrabold text-center text-gray-800 mb-16">Meet Our 
+            <span class="text-[#313540]">
+            Partners
+          </span>
+          </h2>
+      
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+            <!-- Aziz -->
+            <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+              <div class="bg--white rounded-2xl p-6 relative transition text-center">
+              <img src="assests/E2C822E9-791C-43B3-B071-B0690C352E3E.png" alt="Aziz Hemissi" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+              <span class="text-[23px] inter font-bold text-[#000]">Aziz Hemissi</h3>
+              <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Founder & Capital Strategy Lead</p>
+              
+            </div>
+      
+            <!-- Overlay -->
+            <div
+            class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+             <!-- <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Founder & Capital Strategy Lead</p> -->
+            <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+              Founder of Closana, Aziz brings experience in international business and early-stage investing. He’s led
+              multi-country expansion, global outreach engines, and advised startups across EMEA.
+            </p>
+            <a href="http://linkedin.com/in/azizhemissi" target="_blank"
+            class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+            LinkedIn
+            <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+              →
+            </span>
+            </a>
+             </div>
+            </div>
+            <!-- end overlay -->
+      
+            <!-- Danny -->
+            <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="bg-white rounded-2xl p-6  transition text-center">
+              <img src="assests/7D0AD271-0AF7-4AF1-88ED-32DA8DD90A87.png" alt="Danny" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+              <span class="text-[23px] inter font-bold text-[#000]">Danny</h3>
+              <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Lead Growth Strategist</p>
+               
+            </div>
+      
+            <!-- Overlay -->
+            <div
+            class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+              <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+              With 15+ years and 500+ startups under his belt, Danny leads cold outreach systems that deliver. He helps founders get real conversations, not ignored emails.
+            </p>
+            <a  href="http://linkedin.com/in/danielpkirk" target="_blank"
+            class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+            LinkedIn
+            <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+              →
+            </span>
+            </a>
+             </div>
+            </div>
+            <!-- end overlay -->
+      
+            <!-- Andrew -->
+            <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="bg-white rounded-2xl p-6  transition text-center">
+              <img src="assests/F5BE2D49-E417-402F-8F2E-1C9F261B12BD.jpeg" alt="Andrew Troya" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+              <span class="text-[23px] inter font-bold text-[#000]">Andrew Troya</h3>
+              <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Senior Outbound Strategist</p>
+             
+            </div>
+      
+             <!-- Overlay -->
+             <div
+             class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+             <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+              Andrew has led outbound for 25+ startups, building $800K+ pipelines. He brings consistency and results — without the fluff.
+            </p>
+            <a href="http://linkedin.com/in/andrew-troya-138448116" target="_blank" 
+            class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+            LinkedIn
+            <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+              →
+            </span>
+          </a>
+              </div>
+             </div>
+             <!-- end overlay -->
+       
+      
+            <!-- Bryan -->
+            <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="bg-white rounded-2xl p-6  transition text-center">
+              <img src="assests/A70F027E-70C7-4657-BC47-58A2A3AE3446.jpeg" alt="Bryan Wakefield" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+              <span class="text-[23px] inter font-bold text-[#000]">Bryan Wakefield</h3>
+              <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Fractional CFO & Fundraising Strategist</p>
+              
+            </div>
+      
+             <!-- Overlay -->
+             <div
+             class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+             <p class="text-[#212121] fonthack text-sm leading-relaxed mb-4">
+              Bryan turns messy numbers into VC-grade clarity — helping founders get investor-ready fast.
+            </p>
+            <a  href="http://linkedin.com/in/bryanlwakefield" target="_blank" 
+            class="group inline-flex items-center justify-center gap-1 text-white text-sm font-semibold inter bg-gray-800 px-4 py-2 rounded-[5px] transition-all duration-300 hover:bg-gray-900">
+            LinkedIn
+            <span class="transform translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300">
+              →
+            </span>
+          </a>
+              </div>
+             </div>
+             <!-- end overlay -->
+       
+      
+            <!-- Kwesi -->
+            <div class="relative group bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="bg-white rounded-2xl p-6  transition text-center">
+              <img src="assests/E75B0B68-0BE5-48E5-A9C6-500CA74A48F1.jpeg" alt="Kwesi Bhengu" class="w-24 h-24 object-cover mx-auto rounded-full mb-4">
+              <span class="text-[23px] inter font-bold text-[#000]">Kwesi Bhengu</span>
+              <p class="text-[16px] text-[#333] font-medium mb-3 fonthack">Legal Advisor</p>
+             
+              <!-- No LinkedIn provided -->
+            </div>
+      
+             <!-- Overlay -->
+             <div
+             class="absolute top-0 left-0 w-full h-full bg--grey p-6 text-center transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out z-20 flex flex-col justify-center">
+             <p class="text-[#212121] text-sm leading-relaxed mb-4 inter">
+              Kwesi is a startup legal strategist with 10+ years advising on venture deals, term sheets, and global compliance.
+            </p>
+              </div>
+             </div>
+             <!-- end overlay -->
+       
+      
+          </div>
+        </div>
+          </section>
+ 
+          <footer id="footer" class="footer bg--dark">
+            <div class="footer__container">
+                <div class="footer__menus">
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">What we offer</p>
+                        <ul id="footer__menu_1" class="footer__menu">
+                            
+                            <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86">
+                                <a href="fundraise.html">Fundraising Support</a>
+                            </li>
+                            <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
+                                <a href="growthStrategy.html">Growth &#038;Strategy</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">Our company</p>
+                        <ul id="footer__menu_2" class="footer__menu">
+                            
+                            <li id="menu-item-16182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16182">
+                                <a href="prcing.html">Pricing</a>
+                            </li>
+                            <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88">
+                                <a rel="nofollow" href="overView.html">About us</a>
+                            </li>
+                            
+                            <li id="menu-item-11727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11727">
+                                <a href="Team.html">Partners</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu_wrap">
+                        <p class="footer__menu_title">Information</p>
+                        <ul id="footer__menu_3" class="footer__menu">
+                            <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-94">
+                                <a rel="nofollow privacy-policy" href="privacypolicy.html">Privacy Policy</a>
+                            </li>
+                            <!-- <li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98">
+                                <a rel="nofollow" href="https://waveup.com/contact-us/">Contact us</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="subscribe">
+                    <p class="subscribe__title">Subscribe to newsletter</p>
+                    <form id="subscribeForm" action="" class="subscribe__form"  >
+                        <input type="email" name="email" class="subscribe__form_input" placeholder="Enter your email">
+                        <input type="hidden" name="mc_audience" value="c44a717c87">
+                        <input type="hidden" name="reply_list" value="">
+                        <input type="hidden" name="formname" value="subscribeForm">
+                        <button type="submit" class="subscribe__form_btn">Subscribe</button>
+                        <p class="subscribe__form_success success__text">Thank you, your sign-up request was successful!</p>
+                    </form>
+                    <!-- <div class="footer__social">
+                        <a href="https://www.behance.net/wave_up" class="footer__social_link" style="background-image: url(https://waveup.com/wp-content/uploads/2022/11/behance.svg)" rel="nofollow" aria-label="Social media"></a>
+                        <a href="https://dribbble.com/waveup" class="footer__social_link" style="background-image: url(https://waveup.com/wp-content/uploads/2022/11/dribble.svg)" rel="nofollow" aria-label="Social media"></a>
+                        <a href="https://www.facebook.com/waveup.vc/" class="footer__social_link" style="background-image: url(https://waveup.com/wp-content/uploads/2022/11/fb.svg)" rel="nofollow" aria-label="Social media"></a>
+                        <a href="https://www.linkedin.com/company/waveup-international/" class="footer__social_link" style="background-image: url(https://waveup.com/wp-content/uploads/2022/11/insta.svg)" rel="nofollow" aria-label="Social media"></a>
+                    </div> -->
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copy">
+                        <p>
+                            © 2025 Closana  | All Rights Reserved  |  
+                            | <a href="privacypolicy.html" rel="nofollow">Privacy Policy</a>
+                        </p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+          </footer>
+ 
+<!-- END HIDDEN ELEMENTS (MODALS)-->
+<div class="modal-overlay" id="modal-video">
+    <div class="modal-overlay__container">
+        <div class="modal-content">
+            <div class="close-button"></div>
+            <div class="video">
+                <div id="video-popup"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+<div class="modal-overlay modal-contact-us" id="modal-contact-us">
+    <div class="modal-overlay__container my-[30px]">
+        <div class="modal-content">
+            <div class="close-button"></div>
+            <div class="modal-contact-us__title">Have a <span>project in mind?</span></div>
+            <p class="modal-contact-us__subtitle">Leave your information below and one of our experts will be in touch <br>to schedule a call.</p>
+
+            <form id="contactUsModal" action="" class="modal-contact-us__form" onsubmit="return validate(contactUsModal)">
+                <div class="item">
+                    <span class="item__label">Your name:</span>
+                    <input type="text" name="client_name" class="item__input" placeholder="Enter your name">
+                </div>
+                <div class="item">
+                    <span class="item__label">*Your email:</span>
+                    <input type="email" name="email" class="item__input" placeholder="Enter your email" required="">
+                </div>
+                <div class="item item-requests">
+                    <span class="item__label">*You need help with:</span>
+                    <div class="item__dropdown dropdown">
+                        <ul class="dropdown__input item__input" style="pointer-events: auto;">
+                            <li class="_default">
+                                <span class="_default">Select options</span>
+                                <!-- <span class="close"></span> -->
+                            </li>
+                        </ul>
+                        <div class="dropdown__content">
+                            <label>
+                                <input type="checkbox" name="requests" value="Pitch deck" data-name="VC-ready pitch deck">
+                                <span>VC-ready pitch deck</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="requests" value="Financial model" data-name="Financial forecast">
+                                <span>Financial forecast</span>
+                            </label>
+                            <label class="_disabled">
+                                <input type="checkbox" name="requests" value="Investor outreach" data-name="Find investors">
+                                <span>Find investors <span>(FULLY SUBSCRIBED)</span></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="requests" value="Design" data-name="Slides design">
+                                <span>Slides design</span>
+                            </label>
+                            
+                            <label>
+                                <input type="checkbox" name="requests" value="Other" data-name="Other">
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="item__label">Your project is:</span>
+                    <input type="text" name="project" class="item__input" placeholder="Subscription based AI platform">
+                </div>
+                <div class="item">
+                    <span class="item__label">Your current stage:</span>
+                    <input type="text" name="stage" class="item__input" placeholder="Seed stage">
+                </div>
+                <div class="item">
+                    <span class="item__label">Your maximum budget:</span>
+                    <input type="text" name="budget" class="item__input" placeholder="$6 000">
+                </div>
+                <div class="item">
+                    <span class="item__label">How did you find us?</span>
+                    <input type="text" name="client_source" class="item__input" placeholder="Google">
+                </div>
+
+                <input type="hidden" name="mc_audience" value="c44a717c87">
+                <input type="hidden" name="reply_list" value="">
+                <input type="hidden" name="formname" value="modalContactUs">
+                <button type="submit" class="btn">Submit</button>
+                <p class="success__text">Thank you, your sign-up request was successful!</p>
+            <input type="hidden" name="utm_source" value="(direct)"><input type="hidden" name="utm_medium" value="(none)"><input type="hidden" name="traffic_channel" value="(none)"><input type="hidden" name="utm_campaign" value="(not set)"><input type="hidden" name="language" value="en-US"><input type="hidden" name="page_path" value="/pricing/"><input type="hidden" name="device_category" value="desktop"><input type="hidden" name="date" value="4/19/2025, 4:08:37 AM"><input type="hidden" name="first_visit_date" value="4/12/2025, 3:42:09 AM"><input type="hidden" name="session_source" value="waveup.com"><input type="hidden" name="country" value="NG"><input type="hidden" name="city" value="Abuja"><input type="hidden" name="ip" value="102.91.4.47"></form>
+        </div>
+    </div>
+</div>
+</div>
+ 
+<script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        const mainContent = document.getElementById("main-content");
+
+        preloader.style.display = "none";
+        mainContent.style.display = "block";
+
+        setTimeout(() => {
+          mainContent.style.opacity = 1;
+        }, 50); // fade in smoothly
+      }, 3000); // Adjust duration to match animation
+    });
+  </script>
+<style type="text/css">
+.lazyload-bg{background-image: none!important;}
+</style>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() { var bglazyloadImages; if ("IntersectionObserver" in window) { bglazyloadImages = document.querySelectorAll(".lazyload-bg"); var bgimageObserver = new IntersectionObserver(function(entries, observer) { entries.forEach(function(entry) { if (entry.isIntersecting) { var bgimage = entry.target; bgimage.classList.remove("lazyload-bg"); bgimageObserver.unobserve(bgimage); } }); }); bglazyloadImages.forEach(function(image) { bgimageObserver.observe(image); }); } else { var bglazyloadThrottleTimeout; bglazyloadImages = document.querySelectorAll(".lazyload-bg"); function bglazyload () { if(bglazyloadThrottleTimeout) { clearTimeout(bglazyloadThrottleTimeout); } bglazyloadThrottleTimeout = setTimeout(function() { var bgscrollTop = window.pageYOffset; bglazyloadImages.forEach(function(img) { if(img.offsetTop < (window.innerHeight + bgscrollTop)) { img.src = img.dataset.src; img.classList.remove('lazyload-bg'); } }); if(bglazyloadImages.length == 0) { document.removeEventListener("scroll", bglazyload); window.removeEventListener("resize", bglazyload); window.removeEventListener("orientationChange", bglazyload); } }, 20); } document.addEventListener("scroll", bglazyload); window.addEventListener("resize", bglazyload); window.addEventListener("orientationChange", bglazyload); } })
+</script>
+
+<link rel="stylesheet" id="block-acf-section-css" href="https://waveup.com/wp-content/themes/waveup/template-parts/gutenberg/section/section.css?ver=6.4.0.1" type="text/css" media="all">
+  
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js?ver=6.8" id="jq-js"></script>
+  
+ 
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/custom-live-search.js?ver=1.0" id="custom-live-search-js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js?ver=6.8" id="jq-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/cookie.js?ver=6.8" id="cookie-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.cookie.js?ver=6.8" id="jquery.cookie-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/validator.js?ver=6.8" id="validator-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/popup_script.js?ver=6.8" id="popup_script-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/counter2up.js?ver=6.8" id="counter2up-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/aos.js?ver=6.8" id="aos-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.waypoints.js?ver=6.8" id="waypoints-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/swiper-bundle.min.js?ver=6.8" id="swiper-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/jquery.countdown.js?ver=6.8" id="jquery.countdown-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/countdown.js?ver=6.8" id="countdown-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/secondaryUtm.js?ver=6.8" id="secondary_utm-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/pricing.js?ver=6.8" id="pricing-js"></script>
+<script type="text/javascript" src="https://waveup.com/wp-content/themes/waveup/js/main.js?ver=6.8" id="main-js"></script>
+
+
+
+ </div>
+</body>
+   </html>
